@@ -33,6 +33,7 @@ public class PizzaRestaurant implements Contract{
     /**
      * Drops an ingredient onto a pizza
      * @param item to be dropped onto pizza
+     * @return item that is dropped onto pizza
      */
     public String drop(String item){
         if (ingredients.contains(item) == false){
@@ -77,16 +78,20 @@ public class PizzaRestaurant implements Contract{
         if (direction == "Prep Station"){
             System.out.println("Employee is headed in the right direction to make the pizza");
             return true;
-        } if (direction == "Stove"){
+        } 
+        if (direction == "Stove"){
             System.out.println("Employee is headed in the right direction to cook");
             return true;
-        } if (direction == "Dishwasher"){
+        } 
+        if (direction == "Dishwasher"){
             System.out.println("Employee is headed in the right direction to wash dishes");
             return true;
-        } if (direction == "Bathroom"){
+        } 
+        if (direction == "Bathroom"){
             System.out.println("Employee is headed in the right direction to go to the bathroom");
             return true;
-        } else{
+        } 
+        else{
             System.out.println("Employee is headed in the wrong direction");
             return false;
         }
